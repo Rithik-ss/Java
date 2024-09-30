@@ -1,0 +1,30 @@
+interface company{
+    void processpayment();
+}
+class creditcard implements company
+{
+    public void processpayment(){
+        System.out.println("amount credited");
+    }
+}
+class debitcard implements company
+{
+    public void processpayment(){
+        System.out.println("amount debited");
+    }
+}
+class banktransfer implements company{
+    public void processpayment(){
+        System.out.println("bank transfer successful");
+    }
+}
+public class show{
+    public static void main(String[] args){
+        creditcard c1=new creditcard();
+        c1.processpayment();
+        debitcard d1=new debitcard();
+        d1.processpayment();
+        banktransfer b1=new banktransfer();
+        b1.processpayment();
+    }
+}
